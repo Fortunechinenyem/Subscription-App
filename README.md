@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Coding Challenge
+
+A next js an app that:
+
+1. Offers the user a choice between subscription plans (eg. 3 music-streaming plans $29/month, $39/month, $59/month)
+2. Allows user to choose their billing date (eg. the 16th of each month)
+3. Presents the user with the prorated amount they owe now, and what & when their next bill be
 
 ## Getting Started
 

@@ -1,5 +1,3 @@
-// pages/index.tsx
-
 import React, { useState } from "react";
 import PlanSelection from "../Component/PlanSelection";
 import BillingDateSelection from "../Component/BillingDateSelection";
