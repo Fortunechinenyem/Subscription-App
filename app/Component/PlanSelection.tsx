@@ -11,14 +11,14 @@ const PlanSelection: React.FC<PlanSelectionProps> = ({
 }) => {
   return (
     <div className="container mx-auto p-8">
-      <h2 className="text-2xl font-semibold mb-4">
+      <h2 className="text-2xl font-semibold mb-6 text-center">
         Choose a subscription plan:
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="flex md:flex-row sm:flex-col gap-8 mx-auto ">
         {Object.entries(plans).map(([plan, { price, description }]) => (
           <div
             key={plan}
-            className="cursor-pointer border border-gray-300 rounded overflow-hidden transition-transform transform hover:scale-105"
+            className="cursor-pointer bg-white border border-gray-300 rounded-lg overflow-hidden transition-transform transform hover:scale-105 mx-auto "
             onClick={() => onSelectPlan(plan)}
           >
             <input
@@ -28,11 +28,14 @@ const PlanSelection: React.FC<PlanSelectionProps> = ({
               className="hidden"
               onChange={() => onSelectPlan(plan)}
             />
-            <label htmlFor={plan} className="block p-4 text-center">
+            <label
+              htmlFor={plan}
+              className="block p-6 text-center  rounded-t-lg"
+            >
               <div className="flex flex-col justify-between h-full">
                 <h3 className="text-lg font-semibold">{plan}</h3>
-                <p className="text-gray-600">${price}/month</p>
-                <p className="text-sm text-gray-500 mt-2">{description}</p>
+                <p className="text-black">${price}/month</p>
+                <p className="text-sm text-gray-600 mt-2">{description}</p>
               </div>
             </label>
           </div>
