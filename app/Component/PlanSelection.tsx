@@ -14,11 +14,11 @@ const PlanSelection: React.FC<PlanSelectionProps> = ({
       <h2 className="text-2xl font-semibold mb-6 text-center">
         Choose a subscription plan:
       </h2>
-      <div className="flex md:flex-row sm:flex-col gap-8 mx-auto ">
+      <div className="flex flex-wrap justify-center gap-8">
         {Object.entries(plans).map(([plan, { price, description }]) => (
           <div
             key={plan}
-            className="cursor-pointer bg-white border border-gray-300 rounded-lg overflow-hidden transition-transform transform hover:scale-105 mx-auto "
+            className="cursor-pointer bg-white border border-gray-300 rounded-lg overflow-hidden transition-transform transform hover:scale-105 max-w-sm w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mx-auto"
             onClick={() => onSelectPlan(plan)}
           >
             <input
@@ -30,7 +30,7 @@ const PlanSelection: React.FC<PlanSelectionProps> = ({
             />
             <label
               htmlFor={plan}
-              className="block p-6 text-center  rounded-t-lg"
+              className="block p-6 text-center rounded-t-lg"
             >
               <div className="flex flex-col justify-between h-full">
                 <h3 className="text-lg font-semibold">{plan}</h3>
